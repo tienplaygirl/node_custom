@@ -139,7 +139,7 @@ func (ltrx *lesTxRelay) send(txs types.Transactions, count int) {
 func (ltrx *lesTxRelay) Send(txs types.Transactions) {
 	ltrx.lock.Lock()
 	defer ltrx.lock.Unlock()
-	ltrx.send(txs, 5)
+	ltrx.send(txs, 10)
 }
 
 func (ltrx *lesTxRelay) NewHead(head common.Hash, mined []common.Hash, rollback []common.Hash) {
